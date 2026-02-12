@@ -1,0 +1,32 @@
+name: 'DeMarkX Markdown Fixer'
+description: 'Production-ready Markdown repair and normalization'
+author: 'DeMarkX team'
+inputs:
+  apply-safe-fixes:
+    description: 'Automatically apply safe fixes'
+    default: 'true'
+  fail-on-inferred:
+    description: 'Fail if inferred fixes exist'
+    default: 'false'
+  fail-on-lint:
+    description: 'Fail if lint issues exist'
+    default: 'true'
+  dry-run:
+    description: 'If true, log repairs but do not modify files'
+    default: 'false'
+  max-files:
+    description: 'Maximum number of files to process'
+    default: '50'
+  skip-paths:
+    description: 'Comma-separated glob patterns to skip (e.g. docs/**,changelog.md)'
+    default: ''
+  github-token:
+    description: 'GitHub Token for posting PR comments'
+    required: true
+    default: ${{ github.token }}
+runs:
+  using: 'node20'
+  main: 'run.js'
+branding:
+  icon: 'check-square'
+  color: 'indigo'
