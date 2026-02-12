@@ -1,4 +1,4 @@
-# 🛠 DeMarkX Markdown Fixer
+# DeMarkX Markdown Fixer
 
 > Deterministic Markdown repair for CI and teams.
 
